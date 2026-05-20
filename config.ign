@@ -1,0 +1,41 @@
+{
+  "ignition": {
+    "version": "1.7.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "server",
+        "passwordHash": "$6$fcoswelcome$Iyg.Nkr8B3pRLSribHJUIn7JKE0ei37dLrQVfuYU.Q86u9Hd78hIpq1rEHtlLSP7M76J836I4D/N5W/VD5dta/"
+      }
+    ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "mode": 420,
+        "overwrite": true,
+        "contents": {
+          "source": "data:text/plain;charset=utf-8;base64,Q29yZU9z"
+        }
+      },
+      {
+        "path": "/etc/vconsole.conf",
+        "mode": 420,
+        "overwrite": true,
+        "contents": {
+          "source": "data:text/plain;charset=utf-8;base64,S0VZTUFQPWRlCg=="
+        }
+      },
+      {
+        "path": "/etc/ssh/sshd_config.d/20-core-password-login.conf",
+        "mode": 420,
+        "overwrite": true,
+        "contents": {
+          "source": "data:text/plain;charset=utf-8;base64,QWxsb3dVc2VycyBzZXJ2ZXIKUGFzc3dvcmRBdXRoZW50aWNhdGlvbiB5ZXMKUGVybWl0Um9vdExvZ2luIG5vCg=="
+        }
+      }
+    ]
+  }
+}
