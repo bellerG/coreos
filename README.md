@@ -1,13 +1,24 @@
-{
-  "ignition": {
-    "version": "3.5.0"
-  },
-  "passwd": {
-    "users": [
-      {
-        "name": "core",
-        "passwordHash": "$6$fcoswelcome$Iyg.Nkr8B3pRLSribHJUIn7JKE0ei37dLrQVfuYU.Q86u9Hd78hIpq1rEHtlLSP7M76J836I4D/N5W/VD5dta/"
-      }
-    ]
-  }
-}
+# FCOS - ISO
+
+## Install
+sudo loadkeys de
+sudo coreos-installer install /dev/sda --ignition-url https://raw.githubusercontent.com/bellerG/coreos/refs/heads/main/config.ign
+sudo reboot
+
+- Login: core
+- Passwort: welcome1
+
+## Installs
+sudo -i
+rpm-ostree install tmux
+rpm-ostree install -n fail2ban fail2ban-systemd nftables-services
+
+systemctl reboot
+
+rpm -q tmux fail2ban fail2ban-systemd nftables-services
+rpm-ostree status
+
+
+systemctl enable fail2ban.service
+systemctl start fail2ban.service
+systemctl status fail2ban.service
