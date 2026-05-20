@@ -10,6 +10,22 @@ sudo reboot
 - Login: core
 - Passwort: welcome1
 
+## SSH Login
+sudo -i
+/usr/sbin/sshd -T | grep "passwordauthentication"
+
+systemctl restart sshd
+
+
+rpm-ostree install policycoreutils-python-utils
+
+semanage port -m -t ssh_port_t -p tcp 8443
+
+systemctl restart sshd
+
+netstat -tulpen
+
+
 ## Installs
 sudo -i
 
